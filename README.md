@@ -8,3 +8,7 @@ Recursion is used here to generate the Fibonacci sequence, a series in which eac
 Base Cases: If n is 0 or 1, the method returns n. This provides stopping conditions for the recursion.
 Recursive Case: For values of n > 1, the method adds the result of fibonacci(n-1) and fibonacci(n-2).
 Execution Flow: Starting with n=10, the method recursively calculates each term in the sequence up to n, storing results as the recursion "unwinds."
+3.PRODUCT OF NUMBERS IN AN ARRAY
+Base Case: When the recursion reaches the end of the array (index == numbers.length), the method returns 1. This provides a stopping condition to prevent infinite recursion.
+Recursive Case: The method multiplies the current element of the array (numbers[index]) with the result of the recursive call using the next index (index + 1).
+Execution Flow: The recursion processes one number at a time and continues until the base case is reached. As the recursion "unwinds," the multiplication results are aggregated to compute the final product.
