@@ -1,0 +1,30 @@
+import java.util.Random;
+
+public class RecursionProduct {
+
+    // Recursive method to calculate the product of an array
+    public static int productArray(int[] numbers, int index) {
+        if (index == numbers.length) {
+            return 1; // Base case: no more elements to multiply
+        }
+        return numbers[index] * productArray(numbers, index + 1); // Recursive case
+    }
+
+    public static void main(String[] args) {
+        int size = 5; // Size of the array
+        int[] numbers = new int[size];
+        Random random = new Random();
+
+        // Generate random numbers for the array
+        System.out.print("Random numbers: ");
+        for (int i = 0; i < size; i++) {
+            numbers[i] = random.nextInt(10) + 1; // Random number between 1 and 10 (non-zero)
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println();
+
+        // Call the recursive method and print the product
+        int totalProduct = productArray(numbers, 0);
+        System.out.println("Product of numbers: " + totalProduct);
+    }
+}
